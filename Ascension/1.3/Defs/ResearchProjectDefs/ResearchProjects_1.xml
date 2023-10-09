@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>SoulferiumProduction</defName>
+    <label>Soulferium Production</label>
+    <description>Smelt Soulferium from Luciferium and a fresh corpse.</description>
+    <baseCost>6666</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>1.10</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>GodSpeedProduction</defName>
+    <label>God-speed Production</label>
+    <description>Produce go-juice, a synthetic combat-performance-enhancing drug which improves shooting, melee, and movement ability, and dulls pain.</description>
+    <baseCost>77777</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>1.80</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>GoldenPillProduction</defName>
+    <label>Golden Pill Production</label>
+    <description>Produce Golden Pills.</description>
+    <baseCost>7777</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>2.50</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SoulfuelRefining</defName>
+    <label>Soulfuel Refining</label>
+    <description>Refine extremley unstable Soulfuel.</description>
+    <baseCost>66666</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>0.40</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>SoulFragmentation</defName>
+    <label>Soul Fragmentation</label>
+    <description>Extract Soul Shards from corpses via soul fragmentation.</description>
+    <baseCost>666</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>0.40</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

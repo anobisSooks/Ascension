@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugPillBase">
+    <defName>AscensionPill</defName>
+    <label>Ascension Pill</label>
+    <description>The final pill beyond all golden pills. This pill grants the user a tenth of a Pseudo-Immortality cultivation Tier. It is almost essential to achieving higher tiers of Pseudo-Immortality in a practical amount of time. Also can be used to heal like Golden Pill Tier V. May explode when poorly made.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/AscensionPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MarketValue>14844.5</MarketValue>
+      <Mass>0.03</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>1</minRewardCount>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Ascension.IngestionOutcomeDoer_GiveHediffFromQuality">
+          <hediffDef>PseudoImmortality</hediffDef>
+          <severity>0.1</severity>
+          <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<comps>
+	<li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use Ascension Pill to Heal</useLabel>
+        <useDuration>77</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_FixWorstHealthCondition</compClass>
+      </li>
+      <li Class="Ascension.CompProperties_AwfulExplosive">
+	<explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Drug">
+		<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+        <listOrder>1010</listOrder>
+      </li>
+	  <li Class="CompProperties_Glower">
+	  	<glowRadius>2</glowRadius>
+	  	<glowColor>(255, 255, 255)</glowColor>
+	  </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <allowedArchonexusCount>2</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

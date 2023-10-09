@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugPillBase">
+    <defName>GoldenPillTV</defName>
+    <label>Golden Pill Tier V</label>
+    <description>The fifth tier of golden pills used in ascendant foundation building. Unlike other pills, the ectasy of its power make them slightly addictive and a tollerance can be gained making them less effective. Without tolerance, the pill grants a full tiers progression. They can also be used to the same effect as a healer mech serum.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/GoldenPillTV</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MarketValue>14713.6</MarketValue>
+      <Mass>0.03</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>5</minRewardCount>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Ascension.IngestionOutcomeDoer_GoldenPill">
+          <hediffDef>AscendantFoundation</hediffDef>
+          <severity>1</severity>
+		  <tier>5</tier>
+          <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>GoldenPillTVTolerance</hediffDef>
+          <severity>0.17</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>GoldenPillTVHigh</hediffDef>
+          <severity>0.7</severity>
+          <toleranceChemical>GoldenPillTV</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<comps>
+      <li Class="CompProperties_Drug">
+		<chemical>GoldenPillTV</chemical>
+		<addictiveness>0.07</addictiveness>
+        <minToleranceToAddict>0.25</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>1010</listOrder>
+      </li>
+	  <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use Golden Pill Tier V to Heal</useLabel>
+        <useDuration>600</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_FixWorstHealthCondition</compClass>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <allowedArchonexusCount>3</allowedArchonexusCount>
+  </ThingDef>
+  
+    <!-- Teir V pill addiction -->
+	
+  <ChemicalDef>
+    <label>Golden Pill Tier V</label>
+    <defName>GoldenPillTV</defName>
+    <addictionHediff>GoldenPillTVAddiction</addictionHediff>
+    <toleranceHediff>GoldenPillTVTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.27</onGeneratedAddictedToleranceChance>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_GoldenPillTV</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Golden Pill</label>
+    <description>Because of an Golden Pill Tier V addiction, this person needs to regularly consume Tier V Golden Pills to avoid withdrawal symptoms.</description>
+    <listPriority>35</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>GoldenPillTVTolerance</defName>
+    <label>Golden Pill Tier V tolerance</label>
+    <description>A built-up tolerance to Golden Pill Tier V. The more severe this tolerance is, the more Tier V Golden Pills it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.016</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>GoldenPillTV</chemical>
+      </li>
+    </comps>
+  </HediffDef>
+
+ 
+  <HediffDef>
+    <defName>GoldenPillTVHigh</defName>
+	<hediffClass>Hediff_High</hediffClass>
+    <label>Golden Pill Tier V power ectasy</label>
+    <labelNoun>drunkenness</labelNoun>
+    <description>The ectasy of the golden pills power grants those who take it great joy, and temporary grants extremely enchanced natural regeneration beyond that of even Pseudo-Immortals.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.75</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+	  <li>
+        <minSeverity>0.01</minSeverity>
+		<painFactor>0.17</painFactor>
+		<naturalHealingFactor>777.77</naturalHealingFactor>
+      </li>
+	</stages>
+  </HediffDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>GoldenPillTVAddiction</defName>
+    <label>Golden Pill Tier V addiction</label>
+    <description>A chemical addiction to Golden Pill Tier V. The presence of Tier V Golden Pills have created a spiritual and bodily dependancy on it, so the being can no longer function properly without the drug.
+\nWithout regular doses of Tier V Golden Pills, withdrawal symptoms will begin. However, extended abstinence will force the beings spirit and body to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_GoldenPillTV</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0333</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <socialFightChanceFactor>2.0</socialFightChanceFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.17</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.17</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.17</postFactor>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugMajor</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>GoldenPillTVWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>GoldenPillTVAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>Golden Pill Tier V withdrawal</label>
+        <description>The golden sauce illudes me.</description>
+        <baseMoodEffect>-47</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>GoldenPillTVHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>GoldenPillTVHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Golden Pill Tier V power ectasy</label>
+        <description>The golden sauce empowers me.</description>
+        <baseMoodEffect>47</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

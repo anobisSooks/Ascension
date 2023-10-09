@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>SpiritSwordFusion</defName>
+    <label>Spirit Sword Fusion</label>
+    <description>This being has fused with a Spirit Sword, greatly increasing its cognitive functions. Some say in the future those who fuse with it are granted use of its astral form's abilities and not an increased intellectual capacity...</description>
+    <hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1.0, 1.0, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_MessageAfterTicks">
+        <ticks>1</ticks>
+        <message>{0} has fused with a Spirit Sword!</message>
+        <messageType>PositiveEvent</messageType>
+      </li>
+    </comps>
+	<stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.77</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>AscensionOfSpeedDemon</defName>
+    <label>Ascension of the Speed Demon</label>
+    <description>This being has ascended into a Speed Demon, increasing its speed sevenfold. Demon ascendants consume twice as much food and go berserk once every 10 days.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+	  <li Class="HediffCompProperties_HealPermanentWounds" />
+      <li Class="HediffCompProperties_MessageAfterTicks">
+        <ticks>1</ticks>
+        <message>{0} has ascended into a Speed Demon!</message>
+        <messageType>PositiveEvent</messageType>
+      </li>
+    </comps>
+    <stages>
+      <li>
+		<hungerRateFactor>2</hungerRateFactor>
+		<mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>6</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>AscensionOfKnowledge</defName>
+    <label>Ascension of Knowledge</label>
+    <description>This being has ascended into a Scholar of Knowledge.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+	  <li Class="HediffCompProperties_HealPermanentWounds" />
+      <li Class="HediffCompProperties_MessageAfterTicks">
+        <ticks>1</ticks>
+        <message>{0} has ascended into a Scholar of Knowledge!</message>
+        <messageType>PositiveEvent</messageType>
+      </li>
+    </comps>
+    <stages>
+      <li>
+		<socialFightChanceFactor>0.5</socialFightChanceFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>7</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>AscensionOfPower</defName>
+    <label>Ascension of Power</label>
+    <description>This being has ascended into a Warrior of Power.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+	  <li Class="HediffCompProperties_HealPermanentWounds" />
+      <li Class="HediffCompProperties_MessageAfterTicks">
+        <ticks>1</ticks>
+        <message>{0} has ascended into a Warrior of Power!</message>
+        <messageType>PositiveEvent</messageType>
+      </li>
+    </comps>
+    <stages>
+      <li>
+		<socialFightChanceFactor>1.5</socialFightChanceFactor>
+		<painFactor>0.02</painFactor>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.9</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>7</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>7</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>2</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>7</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>PseudoImmortality</defName>
+	<hediffClass>Ascension.PseudoImmortal_Hediff</hediffClass>
+    <label>Pseudo-Immortality</label>
+    <description>This being has achieved Pseudo-Immortality. They cannot grow older than the biological age of 21 years and have a greatly increased natural healing factor and will periodically heal thier worst health conditions including that which would otherwise be incurable, regrowing entirely new limbs or organs if needed.</description>
+	<scenarioCanAdd>true</scenarioCanAdd>
+	<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_MessageAfterTicks">
+        <ticks>1</ticks>
+        <message>{0} has achieved Pseudo-Immortality!</message>
+        <messageType>PositiveEvent</messageType>
+      </li>
+	  <li>
+		<compClass>Ascension.HediffComp_PseudoImmortalHeal</compClass>
+	  </li>
+	  	  <li>
+		<compClass>Ascension.HediffComp_PseudoImmortalAgeless</compClass>
+	  </li>
+	  <li>
+		<compClass>Ascension.HediffComp_PseudoImmortalEffect</compClass>
+	  </li>
+    </comps>
+    <stages>
+	  <li>
+        <label>Tier I Dao King</label>
+        <minSeverity>0.01</minSeverity>
+		<painFactor>0.17</painFactor>
+		<extraTooltip>Heals worst condition every 7 days.</extraTooltip>
+		<naturalHealingFactor>7.77</naturalHealingFactor>
+      </li>
+	  <li>
+        <label>Tier II Dao Sovereign</label>
+        <minSeverity>2</minSeverity>
+		<painFactor>0.17</painFactor>
+		<extraTooltip>Heals worst condition every 4 days.</extraTooltip>
+		<naturalHealingFactor>17.77</naturalHealingFactor>
+      </li>
+	  <li>
+        <label>Tier III Dao Sage</label>
+        <minSeverity>3</minSeverity>
+		<painFactor>0.07</painFactor>
+		<extraTooltip>Heals worst condition every 2 days.</extraTooltip>
+		<naturalHealingFactor>27.77</naturalHealingFactor>
+      </li>
+	  <li>
+        <label>Tier IV Dao Saint</label>
+        <minSeverity>4</minSeverity>
+		<painFactor>0.07</painFactor>
+		<extraTooltip>Heals worst condition every day.</extraTooltip>
+		<naturalHealingFactor>37.77</naturalHealingFactor>
+      </li>
+	  <li>
+        <label>Tier V Dao Celestial</label>
+        <minSeverity>5</minSeverity>
+		<painFactor>0.07</painFactor>
+		<extraTooltip>Heals worst condition every 6 hours.</extraTooltip>
+		<restFallFactor>0.77</restFallFactor>
+		<naturalHealingFactor>55.77</naturalHealingFactor>
+      </li>
+	  <li>
+        <label>Tier VI Grand Emperor</label>
+        <minSeverity>6</minSeverity>
+		<painFactor>0.07</painFactor>
+		<extraTooltip>Heals worst condition every hour.</extraTooltip>
+		<foodPoisoningChanceFactor>0.07</foodPoisoningChanceFactor>
+		<restFallFactor>0.07</restFallFactor>
+		<naturalHealingFactor>77.77</naturalHealingFactor>
+      </li>
+	  <li>
+        <label>Tier VII Supmreme God Emperor</label>
+        <minSeverity>77</minSeverity>
+		<painFactor>0.01</painFactor>
+		<extraTooltip>Heals worst condition every minute.</extraTooltip>
+		<foodPoisoningChanceFactor>0.01</foodPoisoningChanceFactor>
+		<restFallFactor>0.01</restFallFactor>
+		<naturalHealingFactor>777.77</naturalHealingFactor>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>AscendantFoundation</defName>
+    <label>Ascendant Foundation</label>
+    <description>This being has an Ascendant Foundation. It has increased bodily functions, increased natural healing, and decreased pain. Once it reaches the final tier (XII) of Foundation building, it will begin to naturally cultivate Pseudo-Immortality.</description>
+    <hediffClass>Ascension.AscendantFoundation_Hediff</hediffClass>
+	<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+	<maxSeverity>12.0</maxSeverity>
+	<scenarioCanAdd>true</scenarioCanAdd>
+    <isBad>false</isBad>
+    <initialSeverity>0.01</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_MessageAfterTicks">
+        <ticks>1</ticks>
+        <message>{0} has begun Ascendant Foundation building!</message>
+        <messageType>PositiveEvent</messageType>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Tier I</label>
+        <minSeverity>0.01</minSeverity>
+		<painFactor>0.95</painFactor>
+		<naturalHealingFactor>1.05</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.05</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.05</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.05</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.05</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+      </li>
+	  <li>
+        <label>Tier II</label>
+        <minSeverity>2</minSeverity>
+		<painFactor>0.90</painFactor>
+		<naturalHealingFactor>1.1</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.1</offset>
+          </li>
+        </capMods>
+      </li>
+	        <li>
+        <label>Tier III</label>
+        <minSeverity>3</minSeverity>
+		<painFactor>0.85</painFactor>
+		<naturalHealingFactor>1.15</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+	        <li>
+        <label>Tier IV</label>
+        <minSeverity>4</minSeverity>
+		<painFactor>0.80</painFactor>
+		<naturalHealingFactor>1.2</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.2</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
+      </li>
+	        <li>
+        <label>Tier V</label>
+        <minSeverity>5</minSeverity>
+		<painFactor>0.75</painFactor>
+		<naturalHealingFactor>1.25</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.25</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+      </li>
+	  <li>
+        <label>Tier VI</label>
+        <minSeverity>6</minSeverity>
+		<painFactor>0.7</painFactor>
+		<naturalHealingFactor>1.3</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.3</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>
+	        <li>
+        <label>Tier VII</label>
+        <minSeverity>7</minSeverity>
+		<painFactor>0.65</painFactor>
+		<naturalHealingFactor>1.35</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.35</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.35</offset>
+          </li>
+        </capMods>
+      </li>
+	        <li>
+        <label>Tier VIII</label>
+        <minSeverity>8</minSeverity>
+		<painFactor>0.6</painFactor>
+		<naturalHealingFactor>1.4</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.4</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.4</offset>
+          </li>
+        </capMods>
+      </li>
+	  <li>
+        <label>Tier IX</label>
+        <minSeverity>9</minSeverity>
+		<painFactor>0.55</painFactor>
+		<naturalHealingFactor>1.55</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.55</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.55</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.55</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.55</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.55</offset>
+          </li>
+        </capMods>
+      </li>
+	  <li>
+        <label>Tier X</label>
+        <minSeverity>10</minSeverity>
+		<painFactor>0.5</painFactor>
+		<naturalHealingFactor>1.77</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.77</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.77</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>0.77</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.77</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.77</offset>
+          </li>
+        </capMods>
+      </li>
+	  <li>
+        <label>Tier XI</label>
+        <minSeverity>11</minSeverity>
+		<painFactor>0.4</painFactor>
+		<naturalHealingFactor>2.11</naturalHealingFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>1.11</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>1.11</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>1.11</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>1.11</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>1.11</offset>
+          </li>
+        </capMods>
+      </li>
+	  <li>
+        <label>Tier XII</label>
+        <minSeverity>12</minSeverity>
+		<painFactor>0.22</painFactor>
+		<extraTooltip>Now that this being has reached the max Ascendant Foundation Tier it will now begin to naturally cultivate Pseudo-Immortality at a rate of 0.1 every Quadrum.</extraTooltip>
+		<naturalHealingFactor>2.22</naturalHealingFactor>
+        <capMods>
+		  <li>
+            <capacity>Consciousness</capacity>
+            <offset>2.22</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>2.22</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>2.22</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>2.22</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>2.22</offset>
+          </li>
+        </capMods>
+		<hediffGivers>
+          <li Class="HediffGiver_AddSeverity">
+		  <hediff>PseudoImmortality</hediff>
+		  <severityAmount>0.1</severityAmount>
+		  <mtbHours>360</mtbHours>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

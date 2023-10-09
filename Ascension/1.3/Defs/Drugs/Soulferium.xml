@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugPillBase">
+    <defName>Soulferium</defName>
+    <label>Soulferium</label>
+    <description>A soul-infused version of Luciferium that dramatically improve the body's functioning in all respects. Over time, it can even heal old scarred-over wounds or brain damage, though it cannot regenerate lost limbs. Unfortunately, without the moderating effects of regular doses every five or six days, the soul-infused mechanites lose cohesion, causing continuous berserk rages and, eventually, death.\n\nAfter the first dose, there is no way to get the soul-infused mechanites out, ever.\n\n Many have been forced to kill friends when no more of the seductive Soulferium pills could be found.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SoulferiumHigh</HediffDef>
+      <HediffDef>SoulferiumAddiction</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/Luciferium</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MarketValue>609</MarketValue>
+      <Mass>0.01</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>10</minRewardCount>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SoulferiumHigh</hediffDef>
+          <severity>1.00</severity>
+          <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <researchPrerequisite>SoulferiumProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>SoulCauldron</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+	  <SoulShard>7</SoulShard>
+      <Luciferium>1</Luciferium>
+    </costList>
+	<comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Soulferium</chemical>
+        <addictiveness>1.00</addictiveness>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>1010</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>SoulferiumHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>Soulferium</label>
+    <description>Active Soulferium soul-infused mechanites in the body. They improve the body's functioning in all respects. However, if they are not regularly replenished with more doses of Soulferium, they lose cohesion and drive the user insane.</description>
+    <defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_HealPermanentWounds" />
+    </comps>
+    <stages>
+      <li>
+        <painFactor>0.1</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>6.66</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>6.66</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>6.66</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>6.66</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>6.66</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>6.66</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>6.66</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>6.66</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Luciferium addiction -->
+
+  <ChemicalDef>
+    <defName>Soulferium</defName>
+    <label>Soulferium</label>
+    <addictionHediff>SoulferiumAddiction</addictionHediff>
+    <canBinge>false</canBinge>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Soulferium</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Soulferium</label>
+    <description>This person's body is enhanced by a pact with Soulferium.\n\nWithout regular doses of Soulferium, their soul-infused mechanites will lose cohesion. If this happens, the user becomes continuously, violently insane and eventually dies.\n\nThis addiction never goes away.</description>
+    <listPriority>45</listPriority>
+    <fallPerDay>0.15</fallPerDay>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>SoulferiumAddiction</defName>
+    <label>Soulferium need</label>
+    <description>Soulferium mechanites in the body. Soulferium's soul-infused mechanites decohere over time; only regular doses of fresh Soulferium can prevent this process.
+\nWithout Soulferium, the victims mechanite decoherence will reach a critical state, causing the victim to go insane and die.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_Soulferium</causesNeed>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>unmet</label>
+        <painOffset>0.4</painOffset>
+        <lifeThreatening>true</lifeThreatening>
+        <deathMtbDays>100</deathMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.9</setMax>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.4</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+</Defs>

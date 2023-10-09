@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\NotDubs\Assemblies\AscensionNotDub.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\NotDubs\Assemblies\AscensionNotDub.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\NotDubs\Source\Ascension\obj\Debug\AscensionNotDub.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\NotDubs\Source\Ascension\obj\Debug\AscensionNotDub.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\NotDubs\Source\Ascension\obj\Debug\AscensionNotDub.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\NotDubs\Source\Ascension\obj\Debug\AscensionNotDub.pdb

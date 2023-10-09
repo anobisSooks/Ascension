@@ -1,0 +1,17 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Source\Ascension\obj\Debug\Ascension.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Assemblies\Ascension.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Assemblies\Ascension.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Source\Ascension\obj\Debug\Ascension.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Source\Ascension\obj\Debug\Ascension.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\1.4\Source\Ascension\obj\Debug\Ascension.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\1.4\Source\Ascension\obj\Debug\Ascension.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\1.4\Assemblies\Ascension.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\1.4\Assemblies\Ascension.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\1.4\Source\Ascension\obj\Debug\Ascension.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\1.4\Source\Ascension\obj\Debug\Ascension.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Dubs\Assemblies\Ascension.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Dubs\Assemblies\Ascension.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Dubs\Source\Ascension\obj\Debug\Ascension.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Dubs\Source\Ascension\obj\Debug\Ascension.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Dubs\Source\Ascension\obj\Debug\Ascension.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Ascension\Dubs\Source\Ascension\obj\Debug\Ascension.pdb

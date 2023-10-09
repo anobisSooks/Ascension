@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugPillBase">
+    <defName>GoldenPillTI</defName>
+    <label>Golden Pill Tier I</label>
+    <description>The first tier of golden pills used in ascendant foundation building.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/GoldenPillTI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MarketValue>900.9</MarketValue>
+      <Mass>0.03</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>5</minRewardCount>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Ascension.IngestionOutcomeDoer_GoldenPill">
+          <hediffDef>AscendantFoundation</hediffDef>
+          <severity>0.1</severity>
+		  <tier>1</tier>
+          <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<comps>
+      <li Class="CompProperties_Drug">
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>1010</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <allowedArchonexusCount>3</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

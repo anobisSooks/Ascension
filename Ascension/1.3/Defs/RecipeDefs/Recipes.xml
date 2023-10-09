@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>MakeSoulMould</defName>
+    <label>Make Soul Mould</label>
+    <description>Make a Soul Mould.</description>
+    <researchPrerequisite>SoulFragmentation</researchPrerequisite>
+    <jobString>Smelting Soul Mould.</jobString>
+    <workAmount>7777</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+	<soundWorking>Recipe_Smelt</soundWorking>
+	<skillRequirements>
+      <Crafting>17</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>SoulCauldron</li>
+    </recipeUsers>
+    <products>
+      <SoulMould>1</SoulMould>
+    </products>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>SoulShard</li>
+          </thingDefs>
+        </filter>
+        <count>777</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeGoldenPillTI</defName>
+    <label>Make Golden Pill Tier I</label>
+    <description>Make a Tier I Golden Pill.</description>
+    <researchPrerequisite>GoldenPillProduction</researchPrerequisite>
+    <jobString>Brewing Golden Pill Tier I.</jobString>
+    <workAmount>777</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+	<soundWorking>Recipe_Smelt</soundWorking>
+	<skillRequirements>
+      <Crafting>7</Crafting>
+	  <Cooking>7</Cooking>
+    </skillRequirements>
+    <recipeUsers>
+      <li>SoulCauldron</li>
+    </recipeUsers>
+    <products>
+      <GoldenPillTI>1</GoldenPillTI>
+    </products>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>SoulShard</li>
+          </thingDefs>
+        </filter>
+        <count>77</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>77</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeGoldenPillTII</defName>
+    <label>Make Golden Pill Tier II</label>
+    <description>Make a Tier II Golden Pill.</description>
+	<researchPrerequisite>GoldenPillProduction</researchPrerequisite>
+    <jobString>Brewing Golden Pill Tier II.</jobString>
+    <workAmount>999</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+	<soundWorking>Recipe_Smelt</soundWorking>
+	<skillRequirements>
+      <Crafting>10</Crafting>
+	  <Cooking>10</Cooking>
+    </skillRequirements>
+    <recipeUsers>
+      <li>SoulCauldron</li>
+    </recipeUsers>
+    <products>
+      <GoldenPillTII>1</GoldenPillTII>
+    </products>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>GoldenPillTI</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>77</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+ 
+  <RecipeDef>
+    <defName>MakeGoldenPillTIII</defName>
+    <label>Make Golden Pill Tier III</label>
+    <description>Make a Tier III Golden Pill.</description>
+	<researchPrerequisite>GoldenPillProduction</researchPrerequisite>
+    <jobString>Brewing Golden Pill Tier III.</jobString>
+    <workAmount>3333</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+	<soundWorking>Recipe_Smelt</soundWorking>
+	<skillRequirements>
+      <Crafting>12</Crafting>
+	  <Cooking>12</Cooking>
+    </skillRequirements>
+    <recipeUsers>
+      <li>SoulCauldron</li>
+    </recipeUsers>
+    <products>
+      <GoldenPillTIII>1</GoldenPillTIII>
+    </products>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>GoldenPillTII</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>90</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  
+  
+  <RecipeDef>
+    <defName>MakeGoldenPillTIV</defName>
+    <label>Make Golden Pill Tier IV</label>
+    <description>Make a Tier IV Golden Pill.</description>
+	<researchPrerequisite>GoldenPillProduction</researchPrerequisite>
+    <jobString>Brewing Golden Pill Tier IV.</jobString>
+    <workAmount>4444</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+	<soundWorking>Recipe_Smelt</soundWorking>
+	<skillRequirements>
+      <Crafting>14</Crafting>
+	  <Cooking>14</Cooking>
+    </skillRequirements>
+    <recipeUsers>
+      <li>SoulCauldron</li>
+    </recipeUsers>
+    <products>
+      <GoldenPillTIV>1</GoldenPillTIV>
+    </products>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>GoldenPillTIII</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>90</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeGoldenPillTV</defName>
+    <label>Make Golden Pill Tier V</label>
+    <description>Make a Tier V Golden Pill.</description>
+	<researchPrerequisite>GoldenPillProduction</researchPrerequisite>
+    <jobString>Brewing Golden Pill Tier V.</jobString>
+    <workAmount>7777</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+	<soundWorking>Recipe_Smelt</soundWorking>
+	<skillRequirements>
+      <Crafting>17</Crafting>
+	  <Cooking>17</Cooking>
+    </skillRequirements>
+    <recipeUsers>
+      <li>SoulCauldron</li>
+    </recipeUsers>
+    <products>
+      <GoldenPillTV>1</GoldenPillTV>
+    </products>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>GoldenPillTIV</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>777</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>ExtractSoulShard</defName>
+    <label>Extract Soul Shard</label>
+    <description>Crack free a shard from the soul of a fresh corpse.</description>
+	<researchPrerequisite>SoulFragmentation</researchPrerequisite>
+    <workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>
+    <jobString>Butchering.</jobString>
+    <workAmount>450</workAmount>
+    <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+    <interruptIfIngredientIsRotting>true</interruptIfIngredientIsRotting>
+    <uiIconThing>SoulShard</uiIconThing>
+	<recipeUsers>
+      <li>TableButcher</li>
+	  <li>CraftingSpot</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <SoulShard>1</SoulShard>
+    </products>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Corpses</li>
+      </categories>
+      <disallowedCategories>
+        <li>CorpsesMechanoid</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>RefineSoulfuel</defName>
+    <label>Refine Soulfuel</label>
+    <description>Refine soul shards and chemfuel into Soulfuel.</description>
+	<researchPrerequisite>SoulfuelRefining</researchPrerequisite>
+    <jobString>Refining Soulfuel.</jobString>
+    <workAmount>66666</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+	<recipeUsers>
+      <li>SoulCauldron</li>
+    </recipeUsers>
+    <products>
+      <Soulfuel>6</Soulfuel>
+    </products>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>SoulShard</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+  </RecipeDef>
+  
+  
+</Defs>

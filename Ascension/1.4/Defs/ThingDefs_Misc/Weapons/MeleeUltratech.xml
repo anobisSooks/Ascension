@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BaseWeapon" >
+        <defName>SpiritSword</defName>
+        <label>Spirit Sword</label>
+        <description>A living Spirit Sword. It can be bonded and absorbed into another living being, or used physically in melee combat.</description>
+        <soundInteract>Interact_PlasmaSword</soundInteract>
+        <meleeHitSound>MeleeHit_PlasmaSword</meleeHitSound>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+		<smeltable>false</smeltable>
+		<techLevel>Industrial</techLevel>
+        <statBases>
+			<MarketValue>1320.9</MarketValue>
+            <Mass>0.28</Mass>
+        </statBases>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseItem</useJob>
+				<useLabel>Absorb Spirit Sword</useLabel>
+				<useDuration>1</useDuration>
+			</li>
+			<li>
+				<compClass>Ascension.CompUseEffect_Absorb_SpiritSword</compClass>
+			</li>
+			<li Class="CompProperties_UseEffectDestroySelf"/>
+		</comps>
+        <weaponClasses>
+          <li>MeleePiercer</li>
+        </weaponClasses>
+		<tradeTags>
+			<li>WeaponMelee</li>
+		</tradeTags>
+        <graphicData>
+          <texPath>Things/Item/Equipment/WeaponMelee/SpiritSword</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>2.4</drawSize>
+		  <onGroundRandomRotateAngle>360</onGroundRandomRotateAngle>
+        </graphicData>
+        <tools>
+          <li>
+            <label>handle</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>17</power>
+            <cooldownTime>0.85</cooldownTime>
+          </li>
+          <li>
+            <label>point</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>27</power>
+            <cooldownTime>0.9</cooldownTime>
+          </li>
+          <li>
+            <label>edge</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>27</power>
+            <cooldownTime>0.9</cooldownTime>
+          </li>
+        </tools>
+      </ThingDef>
+</Defs>

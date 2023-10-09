@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>SoulferiumProduction</defName>
+    <label>Soulferium Production</label>
+    <description>Smelt Soulferium from Luciferium and a fresh corpse.</description>
+    <baseCost>6666</baseCost>
+    <techLevel>Industrial</techLevel>
+	<tab>Ascension</tab>
+    <prerequisites>
+      <li>SoulFragmentation</li>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.75</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>GodSpeedProduction</defName>
+    <label>God-speed Production</label>
+    <description>Produce god-speed, A extremely powerful speed-enhancing ascendant drug that provides god-like speed and manipulation, blocks pain, provides extreme pleasure, and improves the user's melee and shooting abilities.</description>
+    <baseCost>77777</baseCost>
+    <techLevel>Spacer</techLevel>
+	<tab>Ascension</tab>
+    <prerequisites>
+      <li>SoulFragmentation</li>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.95</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>GoldenPillProduction</defName>
+    <label>Golden Pill Production</label>
+    <description>Produce Golden Pills.</description>
+    <baseCost>7777</baseCost>
+    <techLevel>Medieval</techLevel>
+	<tab>Ascension</tab>
+    <prerequisites>
+      <li>SoulFragmentation</li>
+    </prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.20</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>AscensionPillProduction</defName>
+    <label>Ascension Pill Production</label>
+    <description>Produce Ascension Pills.</description>
+    <baseCost>7777</baseCost>
+    <techLevel>Medieval</techLevel>
+	<tab>Ascension</tab>
+    <prerequisites>
+      <li>GoldenPillProduction</li>
+    </prerequisites>
+    <researchViewX>2.00</researchViewX>
+    <researchViewY>0.20</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SoulfuelRefining</defName>
+    <label>Soulfuel Refining</label>
+    <description>Refine extremley unstable Soulfuel.</description>
+    <baseCost>66666</baseCost>
+    <techLevel>Spacer</techLevel>
+	<tab>Ascension</tab>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>1.30</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>SoulFragmentation</defName>
+    <label>Soul Fragmentation</label>
+    <description>Make soul shards from fresh corpses, and build Soul Cauldrons.</description>
+    <baseCost>666</baseCost>
+    <techLevel>Neolithic</techLevel>
+	<tab>Ascension</tab>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.20</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>DaoManipulation</defName>
+    <label>Dao Manipulation</label>
+    <description>Extract Dao Energy from organic feedstocks.</description>
+    <baseCost>777</baseCost>
+    <techLevel>Neolithic</techLevel>
+	<tab>Ascension</tab>
+	<prerequisites>
+      <li>SoulFragmentation</li>
+    </prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.70</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>SpiritSwordManifestation</defName>
+    <label>Spirit Sword Manifestation</label>
+    <description>Manifest Spirit Swords from Soul Shards in the Soul Cauldron.</description>
+    <baseCost>7777</baseCost>
+    <techLevel>Medieval</techLevel>
+	<tab>Ascension</tab>
+    <prerequisites>
+      <li>SoulFragmentation</li>
+    </prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.85</researchViewY>
+  </ResearchProjectDef>
+</Defs>
+

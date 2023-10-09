@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>SoulCauldron</defName>
+		<label>Soul Cauldron</label>
+		<description>A cauldron imbuued with a souls flame, used to create golden pills and other soul-related products.</description>
+		<thingClass>Building_WorkTable</thingClass>
+		<designationCategory>Production</designationCategory>
+		<constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+		<size>(5,4)</size>
+		<rotatable>false</rotatable>
+		<fillPercent>0.75</fillPercent>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+    	<blockWind>true</blockWind>
+		<statBases>
+			<MaxHitPoints>777</MaxHitPoints>
+			<WorkToBuild>7777</WorkToBuild>
+			<Flammability>0.0</Flammability>
+			<Beauty>77</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>17</glowRadius>
+				<glowColor>(77, 3, 252)</glowColor>
+			</li>
+		</comps>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-2)</interactionCellOffset>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>777</costStuffCount>
+		<costList>
+			<SoulShard>7</SoulShard>
+		</costList>
+		<drawerType>MapMeshAndRealTime</drawerType>
+    	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>		
+		<graphicData>
+			<texPath>Things/Building/Production/SoulCauldron</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(5,5)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+	<researchPrerequisites>
+      <li>SoulFragmentation</li>
+    </researchPrerequisites>
+	</ThingDef>
+</Defs>

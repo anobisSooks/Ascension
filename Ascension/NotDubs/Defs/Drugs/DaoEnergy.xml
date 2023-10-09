@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugPillBase">
+    <defName>DaoEnergy</defName>
+    <label>Dao Energy</label>
+    <description>The spiritual Dao Energy in its physical form. Once consumed a Dao Pool forms around the beings soul. When this being is starving thier body will convert Dao Energy within this pool into nutrients, feeding it.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/DaoEnergy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+	<stackLimit>7777</stackLimit>
+    <statBases>
+      <MaxHitPoints>777</MaxHitPoints>
+      <MarketValue>177.1</MarketValue>
+      <Mass>0.07</Mass>
+      <Flammability>0.0</Flammability>
+      <DeteriorationRate>0.0</DeteriorationRate>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <minRewardCount>17</minRewardCount>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>DaoPool</hediffDef>
+          <severity>1</severity>
+          <doToGeneratedPawnIfAddicted>true</doToGeneratedPawnIfAddicted>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<comps>
+      <li Class="CompProperties_Drug">
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>1010</listOrder>
+      </li>
+    </comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <allowedArchonexusCount>27</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

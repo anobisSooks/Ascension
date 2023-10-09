@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>DaoPool</defName>
+    <label>Dao Pool</label>
+    <description>This being has a pool of Dao Energy around its soul. When this being is starving or dehydrated thier body will convert Dao Energy within this pool into nutrients or water, sustaining it.</description>
+    <hediffClass>Ascension.DaoPool_Hediff</hediffClass>
+	<defaultLabelColor>(0.0, 1.0, 0.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+	  <li>
+		<compClass>AscensionDubsLib.HediffComp_DaoFeed</compClass>
+	  </li>
+    </comps>
+  </HediffDef>
+</Defs>
